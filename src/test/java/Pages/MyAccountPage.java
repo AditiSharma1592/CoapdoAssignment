@@ -12,12 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MyAccountPage {
 	public WebDriver driver;
 	   
-	public MyAccountPage(WebDriver rdriver)
+	 public MyAccountPage(WebDriver driver)
 	{
-		driver=rdriver;
-		PageFactory.initElements(rdriver, this);
+		this.driver=HomePage.driver;	
 	}
 	
+
 	
 By AddressBookLink =By.xpath("//a[@data-testid='/myaccount/addressbook?storeId=30027&langId=44&catalogId=10151']");
 By AddAddressButton =By.xpath("//button[@data-testid='address-add-button']");

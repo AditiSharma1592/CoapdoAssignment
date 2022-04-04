@@ -19,12 +19,13 @@ import org.junit.Assert;
 
 
 public class HomePage {
-	public WebDriver driver;
+	
+	public static WebDriver driver;
    
-	public HomePage(WebDriver rdriver)
+	public HomePage(WebDriver driver)
 	{
-		driver=rdriver;
-		PageFactory.initElements(rdriver, this);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	By AcceptCookies = By.xpath("//button[@data-testid='Button-primary']");

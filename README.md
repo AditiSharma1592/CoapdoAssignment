@@ -1,4 +1,4 @@
-## Copado Assignment
+## Fedex Assignment
 
 This is a basic Java selenium cucumber framework for testing the registration for new user on  https://uk.tommy.com/. Tests are written in combination of selenium,
 java, Cucumber, & Maven. Test scenarios that are covered are written in Feature files available in Features folder.

@@ -158,7 +158,7 @@
             <scope>provided</scope>
         </dependency>
          <!--  dependency for extinct report -->
-  
+<!--   
 <dependency>
 
 
@@ -166,7 +166,7 @@
  <artifactId>cucumber-picocontainer</artifactId>
  <version>6.8.1</version>
  <scope>test</scope>
- </dependency>
+ </dependency> -->
  
  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
 <dependency>

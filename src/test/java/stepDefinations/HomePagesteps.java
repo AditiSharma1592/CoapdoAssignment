@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class steps {
+public class HomePagesteps {
 	
 	public WebDriver driver;
     public HomePage HP;
@@ -24,14 +24,12 @@ public class steps {
 	public void i_open_the_browser() {
 		 System.setProperty("webdriver.chrome.driver", "chromedriver");
 		 driver = new ChromeDriver();
-	     HP= new HomePage(driver);
-	     Account = new MyAccountPage(driver);
+         HP= new HomePage(driver);
 	}
 
 
 	@Given("Go to website {string}")
 	public void go_to_website(String BaseUrl) {
-
 		driver.get(BaseUrl);
 		driver.manage().window().maximize();
 	    HP.acceptCookies();
@@ -115,72 +113,7 @@ public class steps {
       HP.driver.close();
 	}
 
-	//steps for adding new address
 	
-	@When("I click on Add new address option")
-	public void i_click_on_add_new_address_option() {
-	 Account.selectNewAddressOption();
-	 
-	}
-	
-	@When("I enter AddressType")
-	public void i_enter_address_type() {
-	   Account.selectAddressType();
-	}
-	@When("I enter First Name as {string}")
-	public void i_enter_first_name_as(String string) {
-	   Account.EnterFirstName(string);
-	}
-	
-	
-	@When("I enter Last Name as {string}")
-	public void i_enter_last_name_as(String string) {
-	   Account.EnterLastName(string);
-	}
-	
-	
-	@When("I enter Address1 as {string}")
-	public void i_enter_address1_as(String string) {
-	  Account.EnterAddress1(string);
-	}
-	
-	@When("I enter Address2 as {string}")
-	public void i_enter_address2_as(String string) {
-	Account.EnterAddress2(string);
-	}
-	
-	@When("I enter city as {string}")
-	public void i_enter_city_as(String string) {
-	   Account.EnterCity(string);
-	}
-	
-	
-	@When("I enter Postcode as {string}")
-	public void i_enter_postcode_as(String string) {
-	   Account.EnterPostalCode(string);
-	}
-	
-	
-	@When("I enter Country as {string}")
-	public void i_enter_country_as(String string) {
-	    Account.SelectCountry(string);
-	}
-	
-	@When("I click on save Address button")
-	public void i_click_on_save_address_button() {
-	    Account.saveAddress();
-	}
-	
-	
-	@Then("new address is added")
-	public void new_address_is_added() {
-	   Account.ValidateAddressisAdded();
-	}
-
-
-
-
-
 
 
 }

@@ -1,5 +1,5 @@
 Feature: Adding Address
-@firstsc
+
 Scenario: Adding new address after registering new user
 Given I Open the browser
 And Go to website "https://uk.tommy.com/"
